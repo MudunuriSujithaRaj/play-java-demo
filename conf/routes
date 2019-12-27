@@ -4,6 +4,11 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
+GET     /Fancy                      controllers.HelloController.giveResult()
+GET     /Fancy/:name                controllers.HelloController.HelloUser(name: String)
+POST     /FancyDetails               controllers.HelloController.helloUserWithDetails()
+POST     /FancyUserDetails           controllers.HelloController.UserWithDetailsValid()
+GET     /count                       controllers.CountController.getCurrentCount()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
